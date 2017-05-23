@@ -32,15 +32,10 @@ body {
 }
 
 .app {
-    background: url(../images/cordova.png) no-repeat center top; 
+    background: url(../images/bg.jpg) no-repeat center top; 
     position: absolute;             
-    left: 50%;
-    top: 50%;
-    height: 50px;                  
-    width: 225px;                   
-    text-align: center;
-    padding: 180px 0px 0px 0px;     
-    margin: -115px 0px 0px -112px;
+    height: 1440px;                  
+    width: 1080px;
 }
 
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -94,4 +89,12 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+.mdl-layout__drawer {
+    background: #ff0000 url(../images/manu_bg.jpg) no-repeat center top !important;
+}
+
+.mdl-navigation {
+    background-color: rgba(147,147,147,0.8);
 }

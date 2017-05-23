@@ -20,50 +20,12 @@
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        document.getElementById('templom').addEventListener('click', function () {
-            changeView("Budapest, Árpádházi Szent Erzsébet templom, Rózsák tere 8, 1074")
-        }, false);
-        document.getElementById('lagzi').addEventListener('click', function () {
-            changeView("Budapest, Flashback Studio, Bogdáni út 1, 1033")
-        }, false);
-    };
-
-    function changeView(coordinates) {
-
-        //launchnavigator.getAppsForPlatform(launchnavigator.PLATFORM.ANDROID).forEach(function (app) {
-        //    console.log(launchnavigator.getAppDisplayName(app) + " is supported");
-        //});
-
-        launchnavigator.navigate(coordinates, {
-            //app: launchnavigator.APP.USER_SELECT
-            //app: launchnavigator.APP.GEO
-            app: launchnavigator.APP.GOOGLE_MAPS
-        });
-
-    };
-    var onSuccess = function (position) {
-        alert('onSuccess()');
-        launchnavigator.navigate("47.501365,19.0759258", false);
-        launchnavigator.isAppAvailable('WAZE', wazeAvailable, wazeNOTAvailable);
-    };
-
-    function wazeAvailable(a) {
-        alert('Nincs Waze vaze! ' + a);
-    };
-
-    function wazeNOTAvailable() {
-        alert('WAZEEE vaze!');
-    };
-
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: ' + error.code + '\n' +
-            'message: ' + error.message + '\n');
-    }
-
-    function onFail() {
-        var b = 1;
+        //document.getElementById('templom').addEventListener('click', function () {
+        //    changeView("Budapest, Árpádházi Szent Erzsébet templom, Rózsák tere 8, 1074")
+        //}, false);
+        //document.getElementById('lagzi').addEventListener('click', function () {
+        //    changeView("Budapest, Flashback Studio, Bogdáni út 1, 1033")
+        //}, false);
     };
 
     function onPause() {
@@ -73,4 +35,20 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
-} )();
+})();
+
+
+function changeView(coordinates) {
+
+    //launchnavigator.getAppsForPlatform(launchnavigator.PLATFORM.ANDROID).forEach(function (app) {
+    //    console.log(launchnavigator.getAppDisplayName(app) + " is supported");
+    //});
+
+    launchnavigator.navigate(coordinates, {
+        app: launchnavigator.APP.USER_SELECT,
+        transportMode: launchnavigator.TRANSPORT_MODE.TRANSIT
+        //app: launchnavigator.APP.GEO
+        //app: launchnavigator.APP.GOOGLE_MAPS
+    });
+
+};

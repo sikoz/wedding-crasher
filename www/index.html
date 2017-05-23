@@ -5,43 +5,38 @@
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://code.getmdl.io 'unsafe-eval'; style-src 'self' data: gap: https://code.getmdl.io https://fonts.googleapis.com 'unsafe-inline'; media-src *; font-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://code.getmdl.io 'unsafe-eval' 'unsafe-inline'; style-src 'self' data: gap: https://code.getmdl.io https://fonts.googleapis.com 'unsafe-inline'; media-src *; font-src *">
         
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
         <title>EskuvoApp</title>
     </head>
     <body>
         <!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer app">
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">MENU</span>
                 <nav class="mdl-navigation">
-                    <a id="program" class="mdl-navigation__link" href="">Program</a>
-                    <a id="kepek" class="mdl-navigation__link" href="">Képek</a>
-                    <a id="templom" class="mdl-navigation__link" href="">Térkép - Templom</a>
-                    <a id="lagzi" class="mdl-navigation__link" href="">Térkép - Lagzi</a>
-                    <a id="fuvar" class="mdl-navigation__link" href="">Fuvar</a>
+                    <a class="mdl-navigation__link" href="">Program</a>
+                    <a class="mdl-navigation__link" href="http://www.google.com">Képek</a>
+                    <a onclick="changeView('Budapest, Árpádházi Szent Erzsébet templom, Rózsák tere 8, 1074'); return false;" class="mdl-navigation__link" href="">Térkép - Templom</a>
+                    <a onclick="changeView('Budapest, Flashback Studio, Bogdáni út 1, 1033');" class="mdl-navigation__link" href="">Térkép - Lagzi</a>
+                    <a class="mdl-navigation__link" href="">Fuvar</a>
+                    <a class="mdl-navigation__link" href="./etlap.html">Étlap</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
                 <div class="page-content"><!-- Your content goes here --></div>
             </main>
         </div>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
