@@ -1,0 +1,12 @@
+﻿body {
+    background-color:#E2E2E2;
+}
+
+.button_back {
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.demo-list-item {
+    width: 300px;
+}

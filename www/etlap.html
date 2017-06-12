@@ -2,12 +2,95 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://code.getmdl.io 'unsafe-eval' 'unsafe-inline'; style-src 'self' data: gap: https://code.getmdl.io https://fonts.googleapis.com 'unsafe-inline'; media-src *; font-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-green.min.css" /> 
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/etlap.css">
     <title>Étlap</title>
 </head>
 <body>
-    <h1>Étlap/Itallap</h1>
-    <a class="button_back" href="./index.html">Vissza</a>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title"></span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Étlap</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab">Itallap</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">MENU</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Program</a>
+                <a class="mdl-navigation__link" href="http://www.google.com">Képek</a>
+                <a onclick="changeView('Budapest, Árpádházi Szent Erzsébet templom, Rózsák tere 8, 1074'); return false;" class="mdl-navigation__link" href="">Térkép - Templom</a>
+                <a onclick="changeView('Budapest, Flashback Studio, Bogdáni út 1, 1033');" class="mdl-navigation__link" href="">Térkép - Lagzi</a>
+                <a class="mdl-navigation__link" href="">Fuvar</a>
+                <a class="mdl-navigation__link" href="./etlap.html">Étlap</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                <div class="page-content">
+                    <ul class="demo-list-item mdl-list">
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                Újházy tyúkhúsleves
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                Vörösboros marhapörkölt
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                Steak mogyorós öntettel
+                            </span>
+                        </li>
+                    </ul>
+                    <a class="button_back" href="./index.html">Vissza</a>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div class="page-content">
+                    <ul class="demo-list-item mdl-list">
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                Sör
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                Bor
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                Pálinka
+                            </span>
+                        </li>
+                    </ul>
+                    <a class="button_back" href="./index.html">Vissza</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>

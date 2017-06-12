@@ -32,7 +32,7 @@ body {
 }
 
 .app {
-    background: url(../images/bg.jpg) no-repeat center top; 
+    /*background: url(../images/bg.jpg) no-repeat center top;*/ 
     position: absolute;             
     height: 1440px;                  
     width: 1080px;
@@ -91,10 +91,10 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.mdl-layout__drawer {
+/*.mdl-layout__drawer {
     background: #ff0000 url(../images/manu_bg.jpg) no-repeat center top !important;
 }
 
 .mdl-navigation {
     background-color: rgba(147,147,147,0.8);
-}
+}*/
